@@ -1,10 +1,18 @@
 const express = require("express");
+const expressLayout = require("express-ejs-layouts");
 const app = express();
 
 //link to routes
 const colorPaletteIndex = require("./api/routes/index");
 const feed = require("./api/routes/feed");
 const dashboard = require("./api/routes/dashboard");
+
+//set express ejs view
+app.use(expressLayout);
+app.set("view engine", "ejs");
+
+//set static public folder
+app.use(express.static(__dirname + "/public"));
 
 //routes
 app.use("/", colorPaletteIndex);
