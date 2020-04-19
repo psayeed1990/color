@@ -1,0 +1,34 @@
+{
+    "name": "color",
+    "version": "1.0.0",
+    "description": "A color palette app made with JavaScript",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "server": "nodemon server.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/psayeed1990/color.git"
+    },
+    "keywords": [
+        "color",
+        "palette",
+        "picker"
+    ],
+    "author": "Abu Sayeed",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/psayeed1990/color/issues"
+    },
+    "homepage": "https://github.com/psayeed1990/color#readme",
+    "dependencies": {
+        "ejs": "^3.0.2",
+        "express": "^4.17.1",
+        "express-ejs-layouts": "^2.5.0",
+        "mongoose": "^5.9.9"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.3"
+    }
+}
