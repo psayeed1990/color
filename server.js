@@ -1,4 +1,5 @@
 const express = require("express");
+const mongoose = require("mongoose");
 const expressLayout = require("express-ejs-layouts");
 const app = express();
 
@@ -13,6 +14,13 @@ app.set("view engine", "ejs");
 
 //set static public folder
 app.use(express.static(__dirname + "/public"));
+
+//db config
+const db = require("./config/keys").mongoURI;
+mongoose
+    .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => console.log("mongodb conencted"))
+    .catch((err) => console.log(err));
 
 //routes
 app.use("/", colorPaletteIndex);
